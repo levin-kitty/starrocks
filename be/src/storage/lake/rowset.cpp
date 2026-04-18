@@ -294,6 +294,7 @@ StatusOr<std::vector<ChunkIteratorPtr>> Rowset::read(const Schema& schema, const
     seg_options.column_access_paths = options.column_access_paths;
     seg_options.has_preaggregation = options.has_preaggregation;
     seg_options.enable_predicate_col_late_materialize = options.enable_predicate_col_late_materialize;
+    seg_options.sample_options = options.sample_options;
     seg_options.tablet_id = tablet_id();
     seg_options.rowset_id = metadata().id();
     seg_options.dynamic_rss_id_base = options.dynamic_rss_id_base;
